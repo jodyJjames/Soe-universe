@@ -1,107 +1,32 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Season of Ecstasy Universe 🌍</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-  /* Reset & base */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  body, html {
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0b3d91, #1f8a70, #fceabb);
-    color: #fff;
-    overflow-x: hidden;
-  }
-  /* Animated Caribbean background */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background:
-      radial-gradient(circle at 10% 20%, #fceabb33, transparent 25%),
-      radial-gradient(circle at 80% 70%, #1f8a7033, transparent 25%),
-      radial-gradient(circle at 50% 50%, #0b3d9133, transparent 35%);
-    animation: pulse 10s ease-in-out infinite alternate;
-    z-index: -1;
-  }
-  @keyframes pulse {
-    0% { filter: brightness(1); }
-    100% { filter: brightness(1.2); }
-  }
-  /* Container */
-  .container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-    margin-bottom: 0.5rem;
-  }
-  p.tagline {
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-  }
-  /* Navigation */
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  nav a {
-    background: rgba(255 255 255 / 0.15);
-    color: #fff;
-    padding: 14px 24px;
-    border-radius: 28px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    box-shadow: 0 4px 8px rgb(255 255 255 / 0.1);
-  }
-  nav a:hover {
-    background: rgba(255 255 255 / 0.35);
-    box-shadow: 0 8px 16px rgb(255 255 255 / 0.25);
-  }
-  /* Responsive */
-  @media (max-width: 600px) {
-    h1 { font-size: 2.2rem; }
-    nav a {
-      padding: 12px 18px;
-      font-size: 0.9rem;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoE Universe</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1>Season of Ecstasy Universe 🌍</h1>
-    <p class="tagline">Everything begins here. Your empire, your story, your rules.</p>
-    <nav>
-      <a href="#">🎬 High Tide (Film)</a>
-      <a href="#">🎮 SoE Allstars (Game)</a>
-      <a href="#">🎨 Art & Vision</a>
-      <a href="#">🎧 Soundtrack</a>
-      <a href="#">💰 Crypto & Assets</a>
-      <a href="#">🛍 Merch & Events</a>
-    </nav>
+
+  <!-- Animated Logo Intro -->
+  <div id="intro" class="intro-screen">
+    <video autoplay muted loop id="logo-video">
+      <source src="logo.mp4" type="video/mp4" />
+      Your browser does not support video playback.
+    </video>
   </div>
+
+  <!-- Main Menu -->
+  <div id="main-menu" class="menu hidden">
+    <h1 class="title">Welcome to the SoE Universe 🌍</h1>
+    <div class="button-container">
+      <button onclick="navigate('watch')">🎬 Watch</button>
+      <button onclick="navigate('play')">🎮 Play</button>
+      <button onclick="navigate('explore')">🌎 Explore</button>
+      <button onclick="navigate('live')">🔴 Live</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
